@@ -33,7 +33,7 @@ def fnc_collect_avg_values(duration_seconds=10, interval_seconds=2):
 
     sensor.Disable() # disable sensor
 
-    return statistics.mean(lux_values)
+    return statistics.mean(visible_values)
     
     # except:
     #     sensor.Disable()
