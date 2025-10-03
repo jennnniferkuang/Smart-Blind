@@ -50,7 +50,10 @@ def main():
             else:
                 print("Received unknown decision, please check for issue...")
 
-        time.sleep(300)  # wait for 5 minutes
+        if (config.debug):
+            time.sleep(10)
+        else:
+            time.sleep(config.rest_duration_seconds)
     
 
 if __name__ == "__main__":

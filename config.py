@@ -25,7 +25,7 @@ porch_blind = "02"
 
 #global variables
 debug = False #set to True to enable debug messages, False to surpress them
-#debug = True
+# debug = True
 
 
 high_visible_light  = 140000000 #threshold value to close the blinds, adjust it as needed
@@ -38,3 +38,7 @@ low_visible_light = 45000000 #threshold value to raise the blinds, adjust it as 
 # “gp” : go to favourite position
 # “mu” : micro-step up
 # “md” : micro-step down
+
+collect_duration_seconds = 300 # 5 minutes
+collect_interval_seconds = 10  # every 10 seconds
+rest_duration_seconds = 1800 # 30 minutes rest between collections

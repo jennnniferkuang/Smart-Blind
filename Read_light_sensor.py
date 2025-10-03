@@ -12,7 +12,7 @@ if os.path.exists(libdir):
 
 from waveshare_TSL2591 import TSL2591
 
-def fnc_collect_avg_values(duration_seconds=10, interval_seconds=2):
+def fnc_collect_avg_values(duration_seconds=300, interval_seconds=10):
     lux_values = []
     infrared_values = []
     visible_values = []
@@ -21,11 +21,10 @@ def fnc_collect_avg_values(duration_seconds=10, interval_seconds=2):
     sensor = TSL2591.TSL2591() # init sensor
     
     while duration_seconds > 0:
-        lux_values.append(sensor.Lux) # all we're using is lux for now but store everything else just in case
+        lux_values.append(sensor.Lux)
         sensor.TSL2591_SET_LuxInterrupt(50, 200)
-
         infrared_values.append(sensor.Read_Infrared)
-        visible_values.append(sensor.Read_Visible)
+        visible_values.append(sensor.Read_Visible) # only using visible light for now
         full_spectrum_values.append(sensor.Read_FullSpectrum)
 
         duration_seconds -= interval_seconds
