@@ -39,6 +39,6 @@ low_visible_light = 45000000 #threshold value to raise the blinds, adjust it as 
 # “mu” : micro-step up
 # “md” : micro-step down
 
-collect_duration_seconds = 300 # 5 minutes
-collect_interval_seconds = 10  # every 10 seconds
-rest_duration_seconds = 1800 # 30 minutes rest between collections
+collect_duration_seconds = 180 # seconds, duration to collect and average light value
+collect_interval_seconds = 10  # seconds, interval between each reading from light sensor
+rest_duration_seconds = 300 # seconds, rest between checking light intensity for controlling the blinds
