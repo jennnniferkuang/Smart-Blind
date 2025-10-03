@@ -5,7 +5,7 @@
 
 import config
 from ControlBlind import fnc_control_all_blinds
-from Determin_Open_or_Close import fnc_open_or_close
+from Determine_Open_or_Close import fnc_open_or_close
 import time
 from datetime import datetime
 
